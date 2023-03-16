@@ -9,7 +9,6 @@ storage = "views/storage.xml"  # storage.xml original
 current_balance = 0
 deposit = 0
 withdraw = 0
-
 # Find the balance element and transactions elements in the XML file
 balance_element = root.find('balance')
 transactions_element = root.find('recent_transactions')
@@ -61,9 +60,14 @@ def run():
         print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 4:  # See Transactions
+        print("These are all your transactions:")
         for transaction in transactions:
-            print(transaction.attrib['id'], transaction.find(
-                'operator').text, transaction.find('amount').text, transaction.find('date').text)
+            print(
+                f"{transaction.attrib['id']}: {transaction.find('operator').text}{transaction.find('amount').text}")
+        if int(balance_element.text) >= 0:
+            print(f"Your balance is positive: {balance_element.text}")
+        else:
+            print(f"Your balance is negative: {balance_element.text}")
         run()
     elif option == 5:  # exit
         print("Thank you for banking with us!")
