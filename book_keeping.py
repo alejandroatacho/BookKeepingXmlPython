@@ -41,25 +41,29 @@ def run():
         ET.SubElement(new_transaction, 'operator').text = '+'
         ET.SubElement(new_transaction, 'date').text = str(date)
         tree.write(storage)
-        print(f"Your current balance is: {current_balance}")
+        print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 2:  # withdraw
         withdraw = int(input("How much would you like to withdraw? "))
         current_balance -= withdraw
         # Update the balance element in the XML file
-        balance_element.text = str(current_balance)
+        balance_element.text = str(int(balance_element.text) - withdraw)
+        # Add a new transaction element to the recent_transactions element
+        new_transaction = ET.SubElement(
+            transactions_element, 'transactions', id=str(len(transactions)+1))
+        ET.SubElement(new_transaction, 'amount').text = str(withdraw)
+        ET.SubElement(new_transaction, 'operator').text = '-'
+        ET.SubElement(new_transaction, 'date').text = str(date)
         tree.write(storage)
-        print(f"Your current balance is: {current_balance}")
+        print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 3:  # Check Balance
-        print(f"Your current balance is: {current_balance}")
+        print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 4:  # See Transactions
         for transaction in transactions:
-            print(f"Transaction ID: {transaction.attrib['id']}")
-            print(f"Amount: {transaction.find('amount').text}")
-            print(f"Operator: {transaction.find('operator').text}")
-            print(f"Date: {transaction.find('date').text}")
+            print(transaction.attrib['id'], transaction.find(
+                'operator').text, transaction.find('amount').text, transaction.find('date').text)
         run()
     elif option == 5:  # exit
         print("Thank you for banking with us!")

@@ -2,7 +2,7 @@
 # Path: run.sh
 
 PS3= 'Please enter your choice: '
-options=("Tree viewer" "Add Investors" "#" "Quit")
+options=("Tree viewer" "Bank Options" "#" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -10,9 +10,7 @@ do
             cd script
             exec python tree_viewer.py
             ;;
-        "Add new values")
-        read -r -p "Press any key to continue!: " response
-        response=${response,,}    # tolower
+        "Bank Options")
             exec python book_keeping.py
             ;;
         "#")
