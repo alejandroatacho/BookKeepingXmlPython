@@ -1,11 +1,16 @@
 <bank>
 
-    <balance>10</balance>
+    <balance>50</balance>
     <recent_transactions>
         <transactions id="1">
             <amount>0</amount>
             <operator>-</operator>
             <date>2018-01-01</date>
+        </transactions>
+        <transactions id="2">
+            <amount>50</amount>
+            <operator>+</operator>
+            <date>2023-03-16 18:19:28.742101</date>
         </transactions>
     </recent_transactions>
 

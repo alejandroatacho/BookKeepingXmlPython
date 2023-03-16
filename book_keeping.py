@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import datetime
 
 # opens the file #storage.xml is original file
 tree = ET.parse('views/storage.xml')
@@ -9,9 +10,11 @@ current_balance = 0
 deposit = 0
 withdraw = 0
 
-# Find the balance element in the XML file
+# Find the balance element and transactions elements in the XML file
 balance_element = root.find('balance')
-transactions_element = root.find('transactions')
+transactions_element = root.find('recent_transactions')
+transactions = root.findall('.//transactions')
+date = datetime.datetime.now()
 
 
 def run():
@@ -22,14 +25,21 @@ def run():
     print("Please select an option from the menu below:")
     print("1. Deposit")
     print("2. Withdraw")
-    print("3. Check balance")
-    print("4. Exit")
+    print("3. Check Balance")
+    print("4. See Transactions")
+    print("5. Exit")
     option = int(input("Option: "))
     if option == 1:  # deposit
         deposit = int(input("How much would you like to deposit? "))
         current_balance += deposit
         # Update the balance element in the XML file
         balance_element.text = str(current_balance)
+        # Add a new transaction element to the recent_transactions element
+        new_transaction = ET.SubElement(
+            transactions_element, 'transactions', id=str(len(transactions)+1))
+        ET.SubElement(new_transaction, 'amount').text = str(deposit)
+        ET.SubElement(new_transaction, 'operator').text = '+'
+        ET.SubElement(new_transaction, 'date').text = str(date)
         tree.write(storage)
         print(f"Your current balance is: {current_balance}")
         run()
@@ -44,7 +54,14 @@ def run():
     elif option == 3:  # Check Balance
         print(f"Your current balance is: {current_balance}")
         run()
-    elif option == 4:  # exit
+    elif option == 4:  # See Transactions
+        for transaction in transactions:
+            print(f"Transaction ID: {transaction.attrib['id']}")
+            print(f"Amount: {transaction.find('amount').text}")
+            print(f"Operator: {transaction.find('operator').text}")
+            print(f"Date: {transaction.find('date').text}")
+        run()
+    elif option == 5:  # exit
         print("Thank you for banking with us!")
         exit()
     else:
