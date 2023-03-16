@@ -4,11 +4,19 @@ import tkinter as tk
 from tkinter import filedialog
 
 
-def traverse_tree(node):
-    print(node.tag, node.attrib, node.text)
-    print(len(node), f"{node.tag} has been found\n")
+def traverse_tree(node, level=0):
+    indent = '  ' * level
+    print(f"{indent}\033[1m{node.tag}\033[0m")
+
+    if node.attrib:
+        for name, value in node.attrib.items():
+            print(f"{indent}  \033[33m@{name}:\033[0m {value}")
+
+    if node.text:
+        print(f"{indent}  {node.text.strip()}")
+
     for child in node:
-        traverse_tree(child)
+        traverse_tree(child, level + 1)
 
 
 # Ask the user to select an XML file

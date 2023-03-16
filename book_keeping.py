@@ -11,6 +11,7 @@ withdraw = 0
 
 # Find the balance element in the XML file
 balance_element = root.find('balance')
+transactions_element = root.find('transactions')
 
 
 def run():
