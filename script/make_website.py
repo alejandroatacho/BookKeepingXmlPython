@@ -21,6 +21,10 @@ js_element = ET.Element("script")
 js_element.set("src", "js/main.js")
 xslt_root.find(".//body").append(js_element)
 
+# Add the closing script tag after the first script element
+js_closing_element = ET.SubElement(js_element, "script")
+js_closing_element.text = "</script>"
+
 # Create the XSLT transformer
 transformer = ET.XSLT(xslt_doc)
 
@@ -29,5 +33,5 @@ result_tree = transformer(xml_doc)
 html_doc = ET.tostring(result_tree, pretty_print=True)
 
 # Write the HTML document to a file
-with open('../output.html', 'wb') as f:
+with open('../index.html', 'wb') as f:
     f.write(html_doc)
