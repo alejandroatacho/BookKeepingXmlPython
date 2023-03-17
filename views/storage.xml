@@ -1,26 +1,37 @@
 <bank>
 
-    <balance>20</balance>
+    <balance>3385</balance>
     <recent_transactions>
         <transactions id="1">
             <amount>0</amount>
             <operator>-</operator>
             <date>2023-03-16 16:19:28.742101</date>
         </transactions>
+
         <transactions id="2">
-            <amount>50</amount>
+            <amount>500</amount>
             <operator>+</operator>
-            <date>2023-03-16 18:19:28.742101</date>
+            <date>2023-03-16 21:45:47.766699</date>
         </transactions>
         <transactions id="3">
-            <amount>30</amount>
+            <amount>10</amount>
             <operator>-</operator>
-            <date>2023-03-16 18:29:22.053598</date>
+            <date>2023-03-16 21:45:47.766699</date>
         </transactions>
-        <transactions id="3">
-            <amount>50</amount>
+        <transactions id="4">
+            <amount>1000</amount>
             <operator>+</operator>
-            <date>2023-03-16 18:29:22.053598</date>
+            <date>2023-03-16 21:45:47.766699</date>
+        </transactions>
+        <transactions id="5">
+            <amount>505</amount>
+            <operator>-</operator>
+            <date>2023-03-16 21:45:47.766699</date>
+        </transactions>
+        <transactions id="6">
+            <amount>2400</amount>
+            <operator>+</operator>
+            <date>2023-03-16 21:45:47.766699</date>
         </transactions>
     </recent_transactions>
 

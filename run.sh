@@ -9,7 +9,7 @@ do
 case $opt in
 "Python Scripts")
 PS3='Please choose a tree viewer option: '
-tree_options=("What is my xml/xslt path" "Convert XML to Website" "Tree Viewer" "Option 4")
+tree_options=("What is my xml/xslt path" "Convert XML to Website" "Tree Viewer" "Quit")
 select tree_opt in "${tree_options[@]}"
 do
 case $tree_opt in
@@ -33,9 +33,9 @@ python tree_viewer.py
 read -p "Press any key to continue... "
 break
 ;;
-"Option 4")
+"Quit")
 # Do something for Option 4
-break
+exit 0
 ;;
 *) echo "Invalid option.";;
 esac

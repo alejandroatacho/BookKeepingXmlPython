@@ -20,6 +20,8 @@ def run():
     global current_balance
     global deposit
     global withdraw
+    global transactions
+
     print("Welcome to the bank of Python!")
     print("Please select an option from the menu below:")
     print("1. Deposit")
@@ -40,6 +42,7 @@ def run():
         ET.SubElement(new_transaction, 'operator').text = '+'
         ET.SubElement(new_transaction, 'date').text = str(date)
         tree.write(storage)
+        transactions = root.findall('.//transactions')  # Add this line
         print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 2:  # withdraw
@@ -54,6 +57,7 @@ def run():
         ET.SubElement(new_transaction, 'operator').text = '-'
         ET.SubElement(new_transaction, 'date').text = str(date)
         tree.write(storage)
+        transactions = root.findall('.//transactions')  # Add this line
         print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 3:  # Check Balance
@@ -80,5 +84,4 @@ def run():
 # Run all the functions
 if __name__ == '__main__':
     run()
-    # This can be removed if running in a terminal
     input("Press any key to exit...")

@@ -7,7 +7,7 @@
             </head>
             <body>
                 <div class="container">
-                    <h2>Balance: <xsl:value-of select="bank/balance" /></h2>
+                    <h2>Balance: <xsl:value-of select="bank/balance" />$</h2>
                     <h3>Recent Transactions:</h3>
                     <table border="1">
                         <tr bgcolor="#9acd32">
