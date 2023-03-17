@@ -6,9 +6,9 @@ tree = ET.parse('views/storage.xml')
 root = tree.getroot()  # gets the root of the file
 storage = "views/storage.xml"  # storage.xml original
 
-current_balance = 0
-deposit = 0
-withdraw = 0
+current_balance = 0.0
+deposit = 0.0
+withdraw = 0.0
 # Find the balance element and transactions elements in the XML file
 balance_element = root.find('balance')
 transactions_element = root.find('recent_transactions')
@@ -31,7 +31,7 @@ def run():
     print("5. Exit")
     option = int(input("Option: "))
     if option == 1:  # deposit
-        deposit = int(input("How much would you like to deposit? "))
+        deposit = float(input("How much would you like to deposit? "))
         current_balance += deposit
         # Update the balance element in the XML file
         balance_element.text = str(current_balance)
@@ -46,10 +46,10 @@ def run():
         print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 2:  # withdraw
-        withdraw = int(input("How much would you like to withdraw? "))
+        withdraw = float(input("How much would you like to withdraw? "))
         current_balance -= withdraw
         # Update the balance element in the XML file
-        balance_element.text = str(int(balance_element.text) - withdraw)
+        balance_element.text = str(float(balance_element.text) - withdraw)
         # Add a new transaction element to the recent_transactions element
         new_transaction = ET.SubElement(
             transactions_element, 'transactions', id=str(len(transactions)+1))
@@ -68,7 +68,7 @@ def run():
         for transaction in transactions:
             print(
                 f"{transaction.attrib['id']}: {transaction.find('operator').text}{transaction.find('amount').text}")
-        if int(balance_element.text) >= 0:
+        if float(balance_element.text) >= 0:
             print(f"Your balance is positive: {balance_element.text}")
         else:
             print(f"Your balance is negative: {balance_element.text}")
