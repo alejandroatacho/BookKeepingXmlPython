@@ -19,6 +19,7 @@ xslt_root.find(".//head").append(css_element)
 # Add the JavaScript script element to the XSLT stylesheet
 js_element = ET.Element("script")
 js_element.set("src", "js/main.js")
+js_element.set("type", "text/javascript")
 xslt_root.find(".//body").append(js_element)
 
 # Add the closing script tag after the first script element
