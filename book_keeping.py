@@ -1,3 +1,4 @@
+import xlsxwriter
 import xml.etree.ElementTree as ET
 import datetime
 
@@ -80,8 +81,25 @@ def run():
         print("Invalid option")
         run()
 
+def outputXL():
 
+    workbook = xlsxwriter.Workbook('views/logs/transactions.xlsx')
+    worksheet = workbook.add_worksheet()
+    worksheet.write('A1', 'Transaction ID')
+    worksheet.write('B1', 'Amount')
+    worksheet.write('C1', 'Operator')
+    worksheet.write('D1', 'Date')
+    row = 1
+    col = 0
+    for transaction in transactions:
+        worksheet.write(row, col, transaction.attrib['id'])
+        worksheet.write(row, col + 1, transaction.find('amount').text)
+        worksheet.write(row, col + 2, transaction.find('operator').text)
+        worksheet.write(row, col + 3, transaction.find('date').text)
+        row += 1
+    workbook.close()
 # Run all the functions
 if __name__ == '__main__':
-    run()
-    input("Press any key to exit...")
+    # run()
+    # input("Press any key to exit...")
+    outputXL()
