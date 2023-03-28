@@ -33,6 +33,7 @@ def run():
     option = int(input("Option: "))
     if option == 1:  # deposit
         deposit = float(input("How much would you like to deposit? "))
+        description = input("Please enter a description for this transaction: ")
         current_balance += deposit
         # Update the balance element in the XML file
         balance_element.text = str(current_balance)
@@ -42,12 +43,14 @@ def run():
         ET.SubElement(new_transaction, 'amount').text = str(deposit)
         ET.SubElement(new_transaction, 'operator').text = '+'
         ET.SubElement(new_transaction, 'date').text = str(date)
+        ET.SubElement(new_transaction, 'description').text = str(description)
         tree.write(storage)
         transactions = root.findall('.//transactions')  # Add this line
         print(f"Your current balance is: {balance_element.text}")
         run()
     elif option == 2:  # withdraw
         withdraw = float(input("How much would you like to withdraw? "))
+        description = input("Please enter a description for this transaction: ")
         current_balance -= withdraw
         # Update the balance element in the XML file
         balance_element.text = str(float(balance_element.text) - withdraw)
@@ -89,6 +92,7 @@ def outputXL():
     worksheet.write('B1', 'Amount')
     worksheet.write('C1', 'Operator')
     worksheet.write('D1', 'Date')
+    worksheet.write('E1', 'Description')
     row = 1
     col = 0
     for transaction in transactions:
@@ -96,6 +100,7 @@ def outputXL():
         worksheet.write(row, col + 1, transaction.find('amount').text)
         worksheet.write(row, col + 2, transaction.find('operator').text)
         worksheet.write(row, col + 3, transaction.find('date').text)
+        worksheet.write(row, col + 4, transaction.find('description').text)
         row += 1
     workbook.close()
 # Run all the functions

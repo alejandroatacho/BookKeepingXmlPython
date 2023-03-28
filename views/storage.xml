@@ -1,6 +1,6 @@
 <bank>
 
-    <balance>600.0</balance>
+    <balance>350.0</balance>
     <recent_transactions>
         <transactions id="1">
             <amount>0</amount>
@@ -29,6 +29,17 @@
             <operator>-</operator>
             <date>2023-03-16 22:10:23.995498</date>
         </transactions>
-    <transactions id="6"><amount>600.0</amount><operator>+</operator><date>2023-03-17 10:00:01.249692</date></transactions></recent_transactions>
+        <transactions id="6">
+            <amount>600.0</amount>
+            <operator>+</operator>
+            <date>2023-03-17 10:00:01.249692</date>
+        </transactions>
+        <transactions id="7">
+            <amount>350.0</amount>
+            <operator>+</operator>
+            <date>2023-03-28 09:25:26.490222</date>
+            <description>I want to test this I guess</description>
+        </transactions>
+    </recent_transactions>
 
 </bank>
