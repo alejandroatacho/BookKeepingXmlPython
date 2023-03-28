@@ -14,6 +14,7 @@
                             <th>ID</th>
                             <th>Amount</th>
                             <th>Date</th>
+                            <th>Description</th>
                         </tr>
                         <xsl:for-each select="bank/recent_transactions/transactions">
                             <tr>
@@ -26,6 +27,9 @@
         $ </td>
                                 <td>
                                     <xsl:value-of select="date" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="description" />
                                 </td>
                             </tr>
                         </xsl:for-each>
