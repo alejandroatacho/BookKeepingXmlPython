@@ -1,0 +1,6 @@
+Total SCSS lines: 250
+Total CSS lines: 198
+Total JS lines: 26
+Total HTML lines: 108
+Total PY lines: 210
+Total SH lines: 265
