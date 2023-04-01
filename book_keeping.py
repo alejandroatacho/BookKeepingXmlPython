@@ -105,6 +105,6 @@ def outputXL():
     workbook.close()
 # Run all the functions
 if __name__ == '__main__':
-    # run()
-    # input("Press any key to exit...")
+    run()
+    input("Press any key to exit...")
     outputXL()
