@@ -3,13 +3,13 @@
 
 while true; do
 PS3='Please enter your choice: '
-options=("Python Scripts" "Bank Options" "#" "Quit")
+options=("Scripts" "Bank Options" "#" "Quit")
 select opt in "${options[@]}"
 do
 case $opt in
-"Python Scripts")
+"Scripts")
 PS3='Please choose a tree viewer option: '
-tree_options=("What is my xml/xslt path" "Convert XML to Website" "Tree Viewer" "Quit")
+tree_options=("What is my xml/xslt path" "Convert XML to Website" "CMD Tools/Options" "Quit")
 select tree_opt in "${tree_options[@]}"
 do
 case $tree_opt in
@@ -26,11 +26,42 @@ python make_website.py
 read -p "Press any key to continue... "
 break
 ;;
-"Tree Viewer")
+"CMD Tools/Options")
 # Do something for Option 3
-cd script
-python tree_viewer.py
+PS3='Please choose a tree viewer option: '
+tree_viewer_options=("Code Counter" "Folder Structure" "Delete SASS Mistakes" "Quit")
+select tree_viewer_opt in "${tree_viewer_options[@]}"
+do
+case $tree_viewer_opt in
+"Code Counter")
+# Do something for Option 1
+cd script/cmd
+exec ./code_counter.sh
 read -p "Press any key to continue... "
+break
+;;
+"Folder Structure")
+# Do something for Option 2
+cd script/cmd
+exec ./structure_folder.sh
+read -p "Press any key to continue... "
+break
+;;
+"Delete SASS Mistakes")
+# Do something for Option 2
+cd script/cmd
+exec ./delete_sass.sh
+read -p "Press any key to continue... "
+break
+;;
+"Quit")
+# Do something for Option 3
+break
+exit 0
+;;
+*) echo "Invalid option.";;
+esac
+done
 break
 ;;
 "Quit")
