@@ -161,6 +161,66 @@ main {
   display: none !important;
 }
 
+.hero_image {
+  margin-top: 5rem;
+}
+.hero_image a {
+  display: inline-block;
+}
+.hero_image img {
+  height: 250px;
+  width: auto;
+  animation: rotate-scale-color 10s infinite;
+  transform-origin: center center;
+  transition: filter 0.5s;
+  filter: brightness(100%);
+}
+.hero_image img:hover {
+  filter: brightness(120%);
+}
+
+@keyframes rotate-scale-color {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+  }
+  10% {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 20px rgb(255, 0, 0);
+  }
+  20% {
+    transform: rotate(-15deg) scale(1.2);
+    box-shadow: 0 0 20px rgb(0, 255, 0);
+  }
+  30% {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 20px rgb(0, 0, 255);
+  }
+  40% {
+    transform: rotate(-15deg) scale(1);
+    box-shadow: 0 0 20px rgb(255, 0, 255);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 20px rgb(255, 255, 0);
+  }
+  60% {
+    transform: rotate(-15deg) scale(1.2);
+    box-shadow: 0 0 20px rgb(0, 255, 255);
+  }
+  70% {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 20px rgb(128, 0, 128);
+  }
+  80% {
+    transform: rotate(-15deg) scale(1);
+    box-shadow: 0 0 20px rgb(128, 128, 0);
+  }
+  90% {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 20px rgb(0, 128, 128);
+  }
+}
 @media (min-width: 768px) {
   .container table {
     width: 90%;
