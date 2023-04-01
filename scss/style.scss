@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #1a1a1a; /* dark gray */
+  --secondary-color: #d6d6d6; /* light gray */
+  --accent-color: #ff8c00; /* orange */
+  --background-color: #000000; /* black */
+}
+
 // Define font family
 * {
   font-family: "Times New Roman", Times, serif;
@@ -5,7 +12,6 @@
 
 // Set body background image
 body {
-  background-image: url("../img/bg.png");
   background-position: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -31,12 +37,12 @@ body {
     td {
       padding: 1rem;
       text-align: center;
-      border: 1px solid black;
+      border: 1px solid var(--primary-color);
     }
 
     th {
-      background-color: #9acd32;
-      color: white;
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
     }
   }
 
@@ -44,10 +50,11 @@ body {
     text-align: center;
     font-size: 2rem;
     margin-top: 2rem;
-    border: 2px solid #000;
+    border: 2px solid var(--primary-color);
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
   .recent-transactions {
     display: flex;
     flex-direction: column;
@@ -62,8 +69,8 @@ body {
     align-items: center;
     width: 100%;
     padding: 1rem;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     margin-top: 1rem;
 
@@ -73,7 +80,72 @@ body {
 
     .operator {
       font-weight: bold;
-      color: green;
+      color: var(--accent-color);
+    }
+  }
+}
+
+// Navbar
+.navbar {
+  background-color: var(--primary-color);
+  overflow: hidden;
+
+  a {
+    float: left;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--accent-color);
+    }
+  }
+}
+
+// Footer
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  img {
+    max-height: 50px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 0.5rem;
+
+      a {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
     }
   }
 }
