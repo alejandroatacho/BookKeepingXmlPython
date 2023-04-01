@@ -1,6 +1,6 @@
 import lxml.etree as ET
 
-def transform_xml_to_html(xml_file, xslt_file, output_file, css_path, js_path):
+def transform_xml_to_html(xml_file, xslt_file, output_file, css_path):
     # Load the XML and XSLT files
     xml_doc = ET.parse(xml_file)
     xslt_doc = ET.parse(xslt_file)
@@ -16,14 +16,12 @@ def transform_xml_to_html(xml_file, xslt_file, output_file, css_path, js_path):
     xslt_root.find(".//head").append(css_element)
 
     # Add the JavaScript script element to the XSLT stylesheet
-    js_element = ET.Element("script")
-    js_element.set("src", js_path)
-    js_element.set("type", "text/javascript")
-    xslt_root.find(".//body").append(js_element)
-
-    # Add the closing script tag after the first script element
-    js_closing_element = ET.SubElement(js_element, "script")
-    js_closing_element.text = "</script>"
+    # js_element = ET.Element("script")
+    # js_element.set("src", js_path)
+    # js_element.set("type", "text/javascript")
+    # xslt_root.find(".//body").append(js_element)
+    # js_closing_element = ET.SubElement(js_element, "script")
+    # js_closing_element.text = "</script>"
 
     # Create the XSLT transformer
     transformer = ET.XSLT(xslt_doc)
@@ -38,7 +36,7 @@ def transform_xml_to_html(xml_file, xslt_file, output_file, css_path, js_path):
 
 # Run all the functions
 if __name__ == '__main__':
-    transform_xml_to_html('../views/xml/transactions.xml', '../views/xslt/transactions.xslt', '../index.html', 'scss/style.css', 'js/main.js')
+    transform_xml_to_html('../views/xml/transactions.xml', '../views/xslt/transactions.xslt', '../index.html', 'scss/style.css')
     # transform_xml_to_html('../views/xml/transactions.xml', '../views/xslt/transactions.xslt', '../index.html', 'scss/style.css', 'js/main.js')
 
 # Add more calls for other XML and XSLT file pairs

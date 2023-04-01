@@ -87,7 +87,7 @@ def run():
     else:
         print("Invalid option")
         run()
-
+# Makes an Excel file out of it, convert this to JS later
 def outputXL():
 
     workbook = xlsxwriter.Workbook('data/transactions.xlsx')

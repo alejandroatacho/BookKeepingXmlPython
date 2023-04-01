@@ -2,7 +2,6 @@
 
     <balance>5260.0</balance>
     <recent_transactions>
-
         <transactions id="1">
             <amount>50.0</amount>
             <operator>+</operator>
@@ -22,5 +21,6 @@
             <description>Salary Income</description>
         </transactions>
     </recent_transactions>
+
 
 </bank>

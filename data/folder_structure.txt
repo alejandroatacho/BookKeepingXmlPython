@@ -4,8 +4,10 @@ Folder structure of ./
 |-- book_keeping.py
 .//data
 |-- data/
-.//data/a.txt
-|-- a.txt
+.//data/folder_structure.txt
+|-- folder_structure.txt
+.//data/transactions.xlsx
+|-- transactions.xlsx
 .//folder_structure.txt
 |-- folder_structure.txt
 .//img
@@ -26,33 +28,33 @@ Folder structure of ./
 |-- requirements.txt
 .//run.sh
 |-- run.sh
-.//script
-|-- script/
-.//script/cmd
+.//scripts
+|-- scripts/
+.//scripts/cmd
 |-- cmd/
-.//script/cmd/code_counter.sh
+.//scripts/cmd/code_counter.sh
 |-- code_counter.sh
-.//script/cmd/delete_sass.sh
+.//scripts/cmd/delete_sass.sh
 |-- delete_sass.sh
-.//script/cmd/README.md
+.//scripts/cmd/README.md
 |-- README.md
-.//script/cmd/script
+.//scripts/cmd/script
 |-- script/
-.//script/cmd/script/cmd
+.//scripts/cmd/script/cmd
 |-- cmd/
-.//script/cmd/script/cmd/data
+.//scripts/cmd/script/cmd/data
 |-- data/
-.//script/cmd/script/cmd/data/folder_structure.txt
+.//scripts/cmd/script/cmd/data/folder_structure.txt
 |-- folder_structure.txt
-.//script/cmd/structure_folder.sh
+.//scripts/cmd/structure_folder.sh
 |-- structure_folder.sh
-.//script/hunt_my_path.py
+.//scripts/hunt_my_path.py
 |-- hunt_my_path.py
-.//script/make_website.py
+.//scripts/make_website.py
 |-- make_website.py
-.//script/README.md
+.//scripts/README.md
 |-- README.md
-.//script/tree_viewer.py
+.//scripts/tree_viewer.py
 |-- tree_viewer.py
 .//scss
 |-- scss/
@@ -64,13 +66,15 @@ Folder structure of ./
 |-- style.scss
 .//views
 |-- views/
-.//views/bank.xslt
-|-- bank.xslt
-.//views/logs
-|-- logs/
-.//views/logs/transactions.xlsx
-|-- transactions.xlsx
-.//views/storage.xml
-|-- storage.xml
+.//views/about.html
+|-- about.html
+.//views/xml
+|-- xml/
+.//views/xml/transactions.xml
+|-- transactions.xml
+.//views/xslt
+|-- xslt/
+.//views/xslt/transactions.xslt
+|-- transactions.xslt
 .//website.sh
 |-- website.sh

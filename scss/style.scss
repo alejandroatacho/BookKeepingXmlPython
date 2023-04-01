@@ -31,6 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 100px; // Add margin-bottom to the container
 
   table {
     width: 80%;
@@ -109,22 +110,21 @@ body {
     }
   }
 }
-
-// Footer
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  display: flex; // Use flexbox to align the content
+  flex-direction: row; // Vertically align the content
+  justify-content: center; // Center the content vertically
+  align-items: center; // Center the content horizontally
+  text-align: center; // Center the text horizontally
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem;
-
+  position: static;
+  bottom: 0;
+  width: 100%;
+  div {
+    width: 33%;
+  }
   img {
     max-height: 50px;
   }
@@ -138,9 +138,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    li a i {
-      color: var(--secondary-color) !important;
-    }
+
     li {
       display: inline-block;
       margin: 0 0.5rem;
