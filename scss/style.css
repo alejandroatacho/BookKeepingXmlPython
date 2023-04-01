@@ -14,6 +14,8 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  position: relative;
+  min-height: 100vh;
 }
 
 .container {
@@ -96,8 +98,8 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -117,12 +119,15 @@ body {
   padding: 0;
   margin: 0;
 }
+.footer .social-media li a i {
+  color: var(--secondary-color) !important;
+}
 .footer .social-media li {
   display: inline-block;
   margin: 0 0.5rem;
 }
 .footer .social-media li a {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 1.5rem;
 }
 .footer .social-media li a:hover {

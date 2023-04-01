@@ -7,16 +7,23 @@
                 <!-- <style type="text/css">
                  
                 </style> -->
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                    integrity="sha512-BAmP18o8QwTHV7+LtwOKJZVxhZ8JKOuX7vkw5zo5uV7ewy+0stWVzvBhncOjJHr0qG3+X9lOSjQGbMGb0yuuOA=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
             </head>
             <body>
                 <div class="navbar">
                     <a href="#">Home</a>
-                    <a href="#">About</a>
+                    <a href="#">
+                        About</a>
                     <a href="#">Contact</a>
                 </div>
                 <div class="container">
                     <h2>Current Balance: <xsl:value-of select="bank/balance" />$</h2>
-                    <h3>Recent Transactions:</h3>
+                    <h3>Recent
+                        Transactions:</h3>
                     <table border="1">
                         <tr bgcolor="#9acd32">
                             <th>
@@ -53,10 +60,12 @@
                     </div>
 
                     <div>
-                        <p>Footer text goes here</p>
+                        <p>Footer
+                            text goes here</p>
                     </div>
 
                     <div>
+                        <p>Social Media</p>
                         <ul class="social-media">
                             <li>
                                 <a href="https://www.facebook.com">

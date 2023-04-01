@@ -16,6 +16,8 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  position: relative;
+  min-height: 100vh;
 }
 
 // Define container class
@@ -111,8 +113,8 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -133,13 +135,16 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    li a i {
+      color: var(--secondary-color) !important;
+    }
 
     li {
       display: inline-block;
       margin: 0 0.5rem;
 
       a {
-        color: var(--primary-color);
+        color: var(--secondary-color);
         font-size: 1.5rem;
 
         &:hover {
