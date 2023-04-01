@@ -1,5 +1,6 @@
 #!/bin/bash
 #Path: run.sh
+echo "Hello Cutie _(:3」∠)_ , $(whoami), $(hostname)"
 
 while true; do
 PS3='Please enter your choice: '

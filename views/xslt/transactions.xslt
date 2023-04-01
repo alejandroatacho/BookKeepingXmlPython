@@ -61,7 +61,7 @@
                 </main>
                 <div class="footer">
                     <div>
-                        <img src="img/logo.png" alt="Bank logo" />
+                        <img src="img/footer_logo.png" alt="Bank logo" />
                     </div>
 
                     <div>

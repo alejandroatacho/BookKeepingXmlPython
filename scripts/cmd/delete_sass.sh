@@ -4,10 +4,9 @@
 cd ..
 cd ..
 cd scss
-echo "Hello Cutie _(:3」∠)_ , $(whoami), $(hostname)"
 echo "Deleting my SASS compiler mistakes!"
 sleep 3
-rm -rf *.css.map mobile.css animation.css 2> /dev/null
+rm -rf *.css.map mobile.css animation.css navbar_footer.css 2> /dev/null
 if [ $? -eq 0 ]; then
   echo "Done!, all your compiler mistakes have been deleted."
   sleep 2
