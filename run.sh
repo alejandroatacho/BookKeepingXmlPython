@@ -15,13 +15,13 @@ do
 case $tree_opt in
 "What is my xml/xslt path")
 # Do something for Option 1
-cd script
+cd scripts
 python hunt_my_path.py
 read -p "Press any key to continue... "
 break
 ;;
 "Convert XML to Website")
-cd script
+cd scripts
 python make_website.py
 read -p "Press any key to continue... "
 break
@@ -35,21 +35,21 @@ do
 case $tree_viewer_opt in
 "Code Counter")
 # Do something for Option 1
-cd script/cmd
+cd scripts/cmd
 exec ./code_counter.sh
 read -p "Press any key to continue... "
 break
 ;;
 "Folder Structure")
 # Do something for Option 2
-cd script/cmd
+cd scripts/cmd
 exec ./structure_folder.sh
 read -p "Press any key to continue... "
 break
 ;;
 "Delete SASS Mistakes")
 # Do something for Option 2
-cd script/cmd
+cd scripts/cmd
 exec ./delete_sass.sh
 read -p "Press any key to continue... "
 break

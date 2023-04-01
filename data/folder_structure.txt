@@ -1,0 +1,76 @@
+Folder structure of ./
+=========================
+.//book_keeping.py
+|-- book_keeping.py
+.//data
+|-- data/
+.//data/a.txt
+|-- a.txt
+.//folder_structure.txt
+|-- folder_structure.txt
+.//img
+|-- img/
+.//img/bg.png
+|-- bg.png
+.//img/logo.png
+|-- logo.png
+.//index.html
+|-- index.html
+.//js
+|-- js/
+.//js/main.js
+|-- main.js
+.//README.md
+|-- README.md
+.//requirements.txt
+|-- requirements.txt
+.//run.sh
+|-- run.sh
+.//script
+|-- script/
+.//script/cmd
+|-- cmd/
+.//script/cmd/code_counter.sh
+|-- code_counter.sh
+.//script/cmd/delete_sass.sh
+|-- delete_sass.sh
+.//script/cmd/README.md
+|-- README.md
+.//script/cmd/script
+|-- script/
+.//script/cmd/script/cmd
+|-- cmd/
+.//script/cmd/script/cmd/data
+|-- data/
+.//script/cmd/script/cmd/data/folder_structure.txt
+|-- folder_structure.txt
+.//script/cmd/structure_folder.sh
+|-- structure_folder.sh
+.//script/hunt_my_path.py
+|-- hunt_my_path.py
+.//script/make_website.py
+|-- make_website.py
+.//script/README.md
+|-- README.md
+.//script/tree_viewer.py
+|-- tree_viewer.py
+.//scss
+|-- scss/
+.//scss/style.css
+|-- style.css
+.//scss/style.css.map
+|-- style.css.map
+.//scss/style.scss
+|-- style.scss
+.//views
+|-- views/
+.//views/bank.xslt
+|-- bank.xslt
+.//views/logs
+|-- logs/
+.//views/logs/transactions.xlsx
+|-- transactions.xlsx
+.//views/storage.xml
+|-- storage.xml
+.//website.sh
+|-- website.sh
