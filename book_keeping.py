@@ -7,14 +7,17 @@ tree = ET.parse('views/storage.xml')
 root = tree.getroot()  # gets the root of the file
 storage = "views/storage.xml"  # storage.xml original
 
-current_balance = 0.0
+# current_balance = 0.0
 deposit = 0.0
 withdraw = 0.0
+
 # Find the balance element and transactions elements in the XML file
 balance_element = root.find('balance')
+current_balance = float(balance_element.text)
 transactions_element = root.find('recent_transactions')
 transactions = root.findall('.//transactions')
 date = datetime.datetime.now()
+
 
 
 def run():
@@ -60,6 +63,7 @@ def run():
         ET.SubElement(new_transaction, 'amount').text = str(withdraw)
         ET.SubElement(new_transaction, 'operator').text = '-'
         ET.SubElement(new_transaction, 'date').text = str(date)
+        ET.SubElement(new_transaction, 'description').text = str(description)
         tree.write(storage)
         transactions = root.findall('.//transactions')  # Add this line
         print(f"Your current balance is: {balance_element.text}")
@@ -71,7 +75,7 @@ def run():
         print("These are all your transactions:")
         for transaction in transactions:
             print(
-                f"{transaction.attrib['id']}: {transaction.find('operator').text}{transaction.find('amount').text}")
+                f"{transaction.attrib['id']}: {transaction.find('operator').text}{transaction.find('amount').text} ({transaction.find('description').text})")
         if float(balance_element.text) >= 0:
             print(f"Your balance is positive: {balance_element.text}")
         else:
@@ -86,7 +90,7 @@ def run():
 
 def outputXL():
 
-    workbook = xlsxwriter.Workbook('views/logs/transactions.xlsx')
+    workbook = xlsxwriter.Workbook('data/transactions.xlsx')
     worksheet = workbook.add_worksheet()
     worksheet.write('A1', 'Transaction ID')
     worksheet.write('B1', 'Amount')
