@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik:wght@400;500;700&family=Cambay:wght@400;700&display=swap");
 :root {
-  --primary-color: #1a1a1a; /* dark gray */
-  --secondary-color: #d6d6d6; /* light gray */
-  --accent-color: #ff8c00; /* orange */
-  --background-color: #000000; /* black */
+  --primary-color: #0f0610;
+  --secondary-color: #f8ecff;
+  --accent-color: #2fc8de;
+  --background-color: #8c96a8;
+  --font-family-title: "Montserrat", sans-serif;
+  --font-family-subtitle: "Rubik", sans-serif;
+  --font-family-text: "Cambay", sans-serif;
 }
 
 * {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font-family-text);
 }
 
 body {
@@ -49,6 +53,7 @@ body {
   border: 2px solid var(--primary-color);
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-family-title);
 }
 .container .recent-transactions {
   display: flex;
@@ -87,6 +92,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: var(--font-family-text);
 }
 .navbar a:hover {
   background-color: var(--secondary-color);

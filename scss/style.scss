@@ -1,16 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik:wght@400;500;700&family=Cambay:wght@400;700&display=swap");
+
 :root {
-  --primary-color: #1a1a1a; /* dark gray */
-  --secondary-color: #d6d6d6; /* light gray */
-  --accent-color: #ff8c00; /* orange */
-  --background-color: #000000; /* black */
+  --primary-color: #0f0610;
+  --secondary-color: #f8ecff;
+  --accent-color: #2fc8de;
+  --background-color: #8c96a8;
+  --font-family-title: "Montserrat", sans-serif;
+  --font-family-subtitle: "Rubik", sans-serif;
+  --font-family-text: "Cambay", sans-serif;
 }
 
-// Define font family
 * {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font-family-text);
 }
 
-// Set body background image
 body {
   background-position: cover;
   background-repeat: no-repeat;
@@ -20,7 +23,6 @@ body {
   min-height: 100vh;
 }
 
-// Define container class
 .container {
   width: 100%;
   height: 100%;
@@ -55,6 +57,7 @@ body {
     border: 2px solid var(--primary-color);
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-family-title);
   }
 
   .recent-transactions {
@@ -87,7 +90,6 @@ body {
   }
 }
 
-// Navbar
 .navbar {
   background-color: var(--primary-color);
   overflow: hidden;
@@ -99,6 +101,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: var(--font-family-text);
 
     &:hover {
       background-color: var(--secondary-color);
@@ -138,7 +141,6 @@ body {
     li a i {
       color: var(--secondary-color) !important;
     }
-
     li {
       display: inline-block;
       margin: 0 0.5rem;
