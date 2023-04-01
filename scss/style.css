@@ -14,12 +14,18 @@
 }
 
 body {
-  background-position: cover;
-  background-repeat: no-repeat;
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .container {

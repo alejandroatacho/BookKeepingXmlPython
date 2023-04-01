@@ -18,52 +18,56 @@
                         About</a>
                     <a href="#">Contact</a>
                 </div>
-                <div class="container">
-                    <h2>Current Balance: <xsl:value-of
-                            select="bank/balance" />$</h2>
-                    <h3>Recent
-                        Transactions:</h3>
-                    <table border="1">
-                        <tr>
-                            <th>
-                                ID</th>
-                            <th>Amount</th>
-                            <th>Date</th>
-                            <th>Description</th>
-                        </tr>
-                        <xsl:for-each select="bank/recent_transactions/transactions">
+                <main>
+                    <div class="container">
+                        <h2>Current Balance: <xsl:value-of
+                                select="bank/balance" />$</h2>
+                        <h3>Recent
+                            Transactions:</h3>
+                        <table border="1">
                             <tr>
-                                <td>
-                                    <xsl:value-of select="@id" />
-                                </td>
-                                <td>
-                                    <xsl:value-of select="operator" /> 
-                                    <xsl:value-of select="amount" />
-        $ </td>
-                                <td>
-                                    <xsl:value-of select="date" />
-                                </td>
-                                <td>
-                                    <xsl:value-of select="description" />
-                                </td>
+                                <th>
+                                    ID</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Description</th>
                             </tr>
-                        </xsl:for-each>
-                    </table>
-                    <button onclick="generateExcel()">Generate
-                        Excel</button>
+                            <xsl:for-each select="bank/recent_transactions/transactions">
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="@id" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="operator" /> 
+                                    <xsl:value-of
+                                            select="amount" /> $ </td>
+                                    <td>
+                                        <xsl:value-of select="date" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="description" />
+                                    </td>
+                                </tr>
+                            </xsl:for-each>
+                        </table>
+                        <button onclick="generateExcel()">Generate
+                            Excel</button>
 
-                    <a href="#">
-                        <img src="img/bg.png" alt="Image description" />
-                    </a>
-                </div>
+                        <a href="#">
+                            <img src="img/bg.png" alt="Image description" height="250px"
+                                width="auto" />
+                        </a>
+                    </div>
+                </main>
                 <div class="footer">
                     <div>
                         <img src="img/logo.png" alt="Bank logo" />
                     </div>
 
                     <div>
-                        <p>As the use of technology becomes increasingly prevalent in our daily
-        lives, it is important to remain mindful of its impact on ourselves
+                        <p>As
+                            the use of technology becomes increasingly prevalent in our daily
+                            lives, it is important to remain mindful of its impact on ourselves
                             and society as a whole. This website footer aims to tell a basic
                             story about responsible usage and how it can contribute to a more
         sustainable future for all. It encourages visitors to question their
@@ -78,7 +82,8 @@
                     </div>
 
                     <div>
-                        <p>Social Media</p>
+                        <p>Social
+                            Media</p>
                         <ul class="social-media">
                             <span>
                                 <a href="https://www.facebook.com">
