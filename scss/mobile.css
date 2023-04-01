@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+  .container table {
+    width: 90%;
+  }
+  .navbar a {
+    font-size: 18px;
+    padding: 14px 20px;
+  }
+  .footer div {
+    width: 30%;
+  }
+  .footer img {
+    max-height: 60px;
+  }
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container table {
+    width: 80%;
+  }
+  .navbar a {
+    font-size: 20px;
+    padding: 14px 24px;
+  }
+  .footer div {
+    width: 33%;
+  }
+  .footer img {
+    max-height: 70px;
+  }
+  .footer p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=mobile.css.map */

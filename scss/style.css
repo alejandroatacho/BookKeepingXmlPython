@@ -11,6 +11,8 @@
 
 * {
   font-family: var(--font-family-text);
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -37,6 +39,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
+  margin-top: 5rem;
 }
 .container table {
   width: 80%;
@@ -77,7 +80,7 @@ main {
   padding: 1rem;
   background-color: var(--secondary-color);
   border: 1px solid var(--primary-color);
-  border-radius: 5px;
+  border-radius: 0.313rem;
   margin-top: 1rem;
 }
 .container .transaction .amount {
@@ -91,6 +94,13 @@ main {
 .navbar {
   background-color: var(--primary-color);
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  margin-bottom: 10px;
 }
 .navbar a {
   float: left;
@@ -144,4 +154,46 @@ main {
 }
 .footer .social-media li a:hover {
   color: var(--accent-color);
+}
+
+.fa-facebook-f::before,
+.footer > i:nth-child(4) {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .container table {
+    width: 90%;
+  }
+  .navbar a {
+    font-size: 18px;
+    padding: 14px 20px;
+  }
+  .footer div {
+    width: 30%;
+  }
+  .footer img {
+    max-height: 60px;
+  }
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container table {
+    width: 80%;
+  }
+  .navbar a {
+    font-size: 20px;
+    padding: 14px 24px;
+  }
+  .footer div {
+    width: 33%;
+  }
+  .footer img {
+    max-height: 70px;
+  }
+  .footer p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
