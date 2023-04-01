@@ -3,9 +3,9 @@ import xml.etree.ElementTree as ET
 import datetime
 
 # opens the file #storage.xml is original file
-tree = ET.parse('views/storage.xml')
+tree = ET.parse('views/xml/transactions.xml')
 root = tree.getroot()  # gets the root of the file
-storage = "views/storage.xml"  # storage.xml original
+storage = "views/xml/transactions.xml"  # storage.xml original
 
 # current_balance = 0.0
 deposit = 0.0
@@ -110,5 +110,6 @@ def outputXL():
 # Run all the functions
 if __name__ == '__main__':
     run()
-    input("Press any key to exit...")
     outputXL()
+    input("Press any key to exit...")
+    
