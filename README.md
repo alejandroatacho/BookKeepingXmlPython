@@ -4,4 +4,4 @@
 
 ## pip install -r requirements.txt
 
-![A picture of applesauce](/img/bg.png)
+![A picture of applesauce](/img/bg.jpg)
