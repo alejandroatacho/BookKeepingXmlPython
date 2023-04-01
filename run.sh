@@ -1,8 +1,7 @@
 #!/bin/bash
 #Path: run.sh
-echo "Hello Cutie _(:3」∠)_ , $(whoami), $(hostname)"
-
 while true; do
+echo "Hello Cutie _(:3」∠)_ , $(whoami), $(hostname)"
 PS3='Please enter your choice: '
 options=("Scripts" "Bank Options" "#" "Quit")
 select opt in "${options[@]}"
