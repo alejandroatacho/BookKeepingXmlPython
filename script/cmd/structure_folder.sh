@@ -12,6 +12,9 @@ if [ -f $file ]; then
 fi
 
 # Create the file and write the header
+
+cd ..
+cd ..
 touch $file
 echo "Folder structure of $path" >> $file
 echo "=========================" >> $file
