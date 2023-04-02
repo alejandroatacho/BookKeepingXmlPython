@@ -25,4 +25,4 @@ for ext in "${!line_counts[@]}"; do
 done
 
 echo "Line count written to $output_file"
-sleep 5
+

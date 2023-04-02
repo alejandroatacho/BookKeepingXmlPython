@@ -4,6 +4,8 @@ Folder structure of ./
 |-- book_keeping.py
 .//data
 |-- data/
+.//data/code_line_count.txt
+|-- code_line_count.txt
 .//data/folder_structure.txt
 |-- folder_structure.txt
 .//data/transactions.xlsx
@@ -12,8 +14,14 @@ Folder structure of ./
 |-- folder_structure.txt
 .//img
 |-- img/
+.//img/bg.jpg
+|-- bg.jpg
 .//img/bg.png
 |-- bg.png
+.//img/bg2.png
+|-- bg2.png
+.//img/footer_logo.png
+|-- footer_logo.png
 .//img/logo.png
 |-- logo.png
 .//index.html
@@ -38,14 +46,6 @@ Folder structure of ./
 |-- delete_sass.sh
 .//scripts/cmd/README.md
 |-- README.md
-.//scripts/cmd/script
-|-- script/
-.//scripts/cmd/script/cmd
-|-- cmd/
-.//scripts/cmd/script/cmd/data
-|-- data/
-.//scripts/cmd/script/cmd/data/folder_structure.txt
-|-- folder_structure.txt
 .//scripts/cmd/structure_folder.sh
 |-- structure_folder.sh
 .//scripts/hunt_my_path.py
@@ -58,16 +58,22 @@ Folder structure of ./
 |-- tree_viewer.py
 .//scss
 |-- scss/
+.//scss/animation.scss
+|-- animation.scss
+.//scss/mobile.scss
+|-- mobile.scss
+.//scss/navbar_footer.scss
+|-- navbar_footer.scss
 .//scss/style.css
 |-- style.css
-.//scss/style.css.map
-|-- style.css.map
 .//scss/style.scss
 |-- style.scss
 .//views
 |-- views/
 .//views/about.html
 |-- about.html
+.//views/transactions.html
+|-- transactions.html
 .//views/xml
 |-- xml/
 .//views/xml/transactions.xml
