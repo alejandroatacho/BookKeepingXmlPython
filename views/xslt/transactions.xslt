@@ -31,6 +31,7 @@
                                 <th>Amount</th>
                                 <th>Date</th>
                                 <th>Description</th>
+                                <th>Flow</th>
                             </tr>
                             <xsl:for-each select="bank/recent_transactions/transactions">
                                 <tr>
@@ -47,16 +48,35 @@
                                     <td>
                                         <xsl:value-of select="description" />
                                     </td>
+
+                                    <td>
+                                        <xsl:choose>
+                                            <xsl:when test="operator = '+'">Income</xsl:when>
+                                            <xsl:when test="operator = '-'">Loss</xsl:when>
+                                            <xsl:otherwise>Unknown</xsl:otherwise>
+                                        </xsl:choose>
+                                    </td>
+
+
                                 </tr>
                             </xsl:for-each>
                         </table>
-                        <button onclick="generateExcel()">Generate
-                            Excel</button>
+                        <div class="button_container">
+                            <div class="button_div">
+                                <button onclick="generateExcel()">Generate
+                                    Excel</button>
+                            </div>
+                            <div class="button_div">
+                                <button onclick="showTransactionData()">Generate
+                                    View</button>
+                            </div>
+                        </div>
                         <div class="hero_image">
                             <a href="#">
                                 <img src="img/bg.png" alt="Image description" />
                             </a>
                         </div>
+
                     </div>
                 </main>
                 <div class="footer">

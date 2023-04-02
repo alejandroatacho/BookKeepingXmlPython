@@ -23,28 +23,40 @@
             <th>Amount</th>
             <th>Date</th>
             <th>Description</th>
+            <th>Flow</th>
           </tr>
           <tr>
             <td>1</td>
             <td>+50.0 $ </td>
             <td>2023-04-01 14:55:42.799765</td>
             <td>Hello</td>
+            <td>Income</td>
           </tr>
           <tr>
             <td>2</td>
             <td>-30.0 $ </td>
             <td>2023-04-01 14:55:42.799765</td>
             <td>Asian Food</td>
+            <td>Loss</td>
           </tr>
           <tr>
             <td>3</td>
             <td>+350.0 $ </td>
             <td>2023-04-01 14:55:42.799765</td>
             <td>Salary Income</td>
+            <td>Income</td>
           </tr>
         </table>
-        <button onclick="generateExcel()">Generate
-                            Excel</button>
+        <div class="button_container">
+          <div class="button_div">
+            <button onclick="generateExcel()">Generate
+                                    Excel</button>
+          </div>
+          <div class="button_div">
+            <button onclick="showTransactionData()">Generate
+                                    View</button>
+          </div>
+        </div>
         <div class="hero_image">
           <a href="#">
             <img src="img/bg.png" alt="Image description"/>

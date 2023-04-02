@@ -57,6 +57,9 @@ main {
       background-color: var(--accent-color);
       color: var(--secondary-color);
     }
+    // td.flow {
+    //   background-color: #f5f5f5;
+    // }
   }
 
   h2 {
@@ -98,6 +101,40 @@ main {
     }
   }
 }
+.button_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  gap: 2rem; // Add gap between buttons
+
+  .button_div {
+    margin-right: 2rem;
+  }
+
+  button {
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+    padding: 1rem;
+    border-radius: 0.313rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center; /* center the text horizontally */
+    align-items: center; /* center the text vertically */
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+    }
+  }
+}
+
 @import "navbar_footer";
 @import "animation";
 @import "mobile";

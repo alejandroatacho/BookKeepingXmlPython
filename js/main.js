@@ -24,3 +24,6 @@ function generateExcel() {
   // Generate the Excel file and download it
   XLSX.writeFile(workbook, 'transactions.xlsx');
 }
+function showTransactionData() {
+  return 0;
+}
