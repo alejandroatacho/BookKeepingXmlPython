@@ -36,7 +36,7 @@ def transform_xml_to_html(xml_file, xslt_file, output_file, css_path):
 
 # Run all the functions
 if __name__ == '__main__':
-    transform_xml_to_html('../views/xml/transactions.xml', '../views/xslt/transactions.xslt', '../index.html', 'scss/style.css')
+    transform_xml_to_html('../views/xml/transactions.xml', '../views/xslt/transactions.xslt', '../views/transactions.html', '../scss/style.css')
     # transform_xml_to_html('../views/xml/transactions.xml', '../views/xslt/transactions.xslt', '../index.html', 'scss/style.css', 'js/main.js')
 
 # Add more calls for other XML and XSLT file pairs

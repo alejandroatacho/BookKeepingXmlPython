@@ -13,9 +13,9 @@
             </head>
             <body>
                 <div class="navbar">
-                    <a href="#">Home</a>
-                    <a href="#">
-                        About</a>
+                    <a href="../index.html">Home</a>
+                    <a href="transactions.html">
+                        Transactions</a>
                     <a href="#">Contact</a>
                 </div>
                 <main>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="hero_image">
                             <a href="#">
-                                <img src="img/bg.png" alt="Image description" />
+                                <img src="../img/bg.png" alt="Image description" />
                             </a>
                         </div>
 

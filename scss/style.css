@@ -195,11 +195,6 @@ main {
   color: var(--accent-color);
 }
 
-.fa-facebook-f::before,
-.footer > i:nth-child(4) {
-  display: none !important;
-}
-
 .hero_image {
   margin-top: 5rem;
 }
