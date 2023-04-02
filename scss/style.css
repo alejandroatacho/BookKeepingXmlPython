@@ -255,6 +255,122 @@ main {
     box-shadow: 0 0 20px rgb(0, 128, 128);
   }
 }
+:root {
+  --primary-color: #0f0610;
+  --secondary-color: #f8ecff;
+  --accent-color: #2fc8de;
+  --background-color: #8c96a8;
+  --font-family-title: "Montserrat", sans-serif;
+  --font-family-subtitle: "Rubik", sans-serif;
+  --font-family-text: "Cambay", sans-serif;
+}
+
+.card_button {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  margin: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+}
+
+.card_button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card,
+.card2 {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .card,
+  .card2 {
+    width: 1200px;
+  }
+}
+@media (min-width: 1920px) {
+  .card,
+  .card2 {
+    width: 2700px;
+    max-width: 100%;
+  }
+}
+.card__content,
+.card__content2 {
+  background-image: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  border-radius: 8px 8px 0 0;
+  height: 150px;
+}
+
+.card__title,
+.card__title2 {
+  text-align: left;
+  padding-top: 50px;
+  padding-left: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+}
+
+.card_container,
+.card_container2 {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .card_container,
+  .card_container2 {
+    flex-direction: column;
+  }
+}
+.card__title2 {
+  text-align: right;
+  padding-top: 50px;
+  padding-right: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+}
+
+.card__text,
+.card__text2 {
+  font-size: 16px;
+  line-height: 1.6;
+  flex: 1;
+  margin-right: 20px;
+  justify-content: center;
+  padding-top: 20px;
+  padding-left: 5rem;
+  color: var(--secondary-color);
+}
+
 @media (min-width: 768px) {
   .container table {
     width: 90%;
