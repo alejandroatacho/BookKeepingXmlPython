@@ -41,6 +41,10 @@ main {
   margin-bottom: 100px;
   margin-top: 5rem;
 }
+.container h2:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
 .container table {
   width: 80%;
   margin-top: 2rem;
@@ -51,6 +55,10 @@ main {
   padding: 1rem;
   text-align: center;
   border: 1px solid var(--primary-color);
+}
+.container table tr:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
 }
 .container table th {
   background-color: var(--accent-color);

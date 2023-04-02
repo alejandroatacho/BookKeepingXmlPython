@@ -67,3 +67,14 @@ function showTransactionData() {
   const container = document.querySelector('.container');
   container.insertBefore(dataContainer, container.querySelector('h3').nextSibling);
 }
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  const footer = document.querySelector('.footer');
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+    footer.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+    footer.classList.remove('scrolled');
+  }
+});
