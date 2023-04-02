@@ -15,7 +15,7 @@ execute_scripts() {
 while true; do
   echo "Hello Cutie _(:3」∠)_ , $(whoami), $(hostname)"
   PS3='Please enter your choice: '
-  options=("Scripts" "Bank Options" "#" "Quit")
+  options=("Scripts" "Bank Options" "Quick Parse" "Quit")
   select opt in "${options[@]}"; do
     case $opt in
       "Scripts")
@@ -45,7 +45,7 @@ while true; do
         done
         ;;
       "Bank Options") python book_keeping.py; read -p "Press any key to continue... "; break ;;
-      "#") echo $opt; break ;;
+      "Quick Parse") execute_scripts 2; break;;
       "Quit") exit 0 ;;
       *) echo "Invalid option." ;;
     esac

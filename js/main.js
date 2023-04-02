@@ -78,3 +78,18 @@ window.addEventListener('scroll', function() {
     footer.classList.remove('scrolled');
   }
 });
+function addClosingTags() {
+  // Get all the <i> elements on the page
+  const italicElements = document.getElementsByTagName('i');
+
+  // Loop through each <i> element and add </i> if it is not already present
+  for (let i = 0; i < italicElements.length; i++) {
+    if (!italicElements[i].innerHTML.endsWith('</i>')) {
+      italicElements[i].innerHTML += '</i>';
+    }
+  }
+}
+
+window.onload = function() {
+  addClosingTags();
+};
