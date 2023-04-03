@@ -12,6 +12,10 @@ Folder structure of ./
 |-- transactions.xlsx
 .//data/transactions_tree_viewer.txt
 |-- transactions_tree_viewer.txt
+.//data/tree viewer xml.txt
+|-- 
+.//data/tree_viewer_xml.txt
+|-- tree_viewer_xml.txt
 .//folder_structure.txt
 |-- folder_structure.txt
 .//img
@@ -62,8 +66,8 @@ Folder structure of ./
 |-- scss/
 .//scss/animation.scss
 |-- animation.scss
-.//scss/content.css
-|-- content.css
+.//scss/content.scss
+|-- content.scss
 .//scss/mobile.scss
 |-- mobile.scss
 .//scss/navbar_footer.scss
