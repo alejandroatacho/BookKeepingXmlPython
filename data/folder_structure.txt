@@ -10,6 +10,8 @@ Folder structure of ./
 |-- folder_structure.txt
 .//data/transactions.xlsx
 |-- transactions.xlsx
+.//data/transactions_tree_viewer.txt
+|-- transactions_tree_viewer.txt
 .//folder_structure.txt
 |-- folder_structure.txt
 .//img
@@ -60,6 +62,8 @@ Folder structure of ./
 |-- scss/
 .//scss/animation.scss
 |-- animation.scss
+.//scss/content.css
+|-- content.css
 .//scss/mobile.scss
 |-- mobile.scss
 .//scss/navbar_footer.scss
@@ -72,6 +76,8 @@ Folder structure of ./
 |-- views/
 .//views/about.html
 |-- about.html
+.//views/snippet_template_1.html
+|-- snippet_template_1.html
 .//views/transactions.html
 |-- transactions.html
 .//views/xml
@@ -82,5 +88,3 @@ Folder structure of ./
 |-- xslt/
 .//views/xslt/transactions.xslt
 |-- transactions.xslt
-.//website.sh
-|-- website.sh

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd ../..
+cd ..
+cd ..
 
 # Initialize associative array for file extensions and line counts
 declare -A line_counts=( ["scss"]=0 ["css"]=0 ["js"]=0 ["html"]=0 ["php"]=0 ["py"]=0 ["sh"]=0 ["xml"]=0 ["xslt"]=0 )

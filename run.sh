@@ -8,6 +8,7 @@ execute_scripts() {
     3) cd scripts/cmd; exec ./code_counter.sh ;;
     4) cd scripts/cmd; exec ./structure_folder.sh ;;
     5) cd scripts/cmd; exec ./delete_sass.sh ;;
+    6) cd scripts; python tree_viewer.py ;;
   esac
   read -p "Press any key to continue... "
 }
@@ -20,11 +21,12 @@ while true; do
     case $opt in
       "Scripts")
         PS3='Please choose a tree viewer option: '
-        tree_options=("What is my xml/xslt path" "Convert XML to Website" "CMD Tools/Options" "Quit")
+        tree_options=("What is my xml/xslt path" "Convert XML to Website" "XML Tree Viewer" "CMD Tools/Options" "Quit")
         select tree_opt in "${tree_options[@]}"; do
           case $tree_opt in
             "What is my xml/xslt path") execute_scripts 1; break ;;
             "Convert XML to Website") execute_scripts 2; break ;;
+            "XML Tree Viewer") execute_scripts 6; break ;;
             "CMD Tools/Options")
               PS3='Please choose a tree viewer option: '
               tree_viewer_options=("Code Counter" "Folder Structure" "Delete SASS Mistakes" "Quit")
