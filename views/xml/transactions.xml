@@ -1,6 +1,6 @@
 <bank>
 
-    <balance>6452.95</balance>
+    <balance>6052.95</balance>
     <recent_transactions>
         <transactions id="1">
             <amount>50.0</amount>
@@ -44,7 +44,7 @@
             <date>2023-04-03 16:29:45.088989</date>
             <description>Money from Jon</description>
         </transactions>
-    </recent_transactions>
+    <transactions id="8"><amount>400.0</amount><operator>-</operator><date>2023-04-03 17:19:22.846062</date><description>Paying Edwuard</description></transactions></recent_transactions>
 
 
 </bank>
