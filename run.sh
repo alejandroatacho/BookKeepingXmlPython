@@ -3,12 +3,12 @@
 
 execute_scripts() {
   case $1 in
-    1) cd scripts; python hunt_my_path.py ;;
-    2) cd scripts; python make_website.py ;;
+    1) cd scripts; python3 hunt_my_path.py ;;
+    2) cd scripts; python3 make_website.py ;;
     3) cd scripts/cmd; exec ./code_counter.sh ;;
     4) cd scripts/cmd; exec ./structure_folder.sh ;;
     5) cd scripts/cmd; exec ./delete_sass.sh ;;
-    6) cd scripts; python tree_viewer.py ;;
+    6) cd scripts; python3 tree_viewer.py ;;
   esac
   read -p "Press any key to continue... "
 }
@@ -46,7 +46,7 @@ while true; do
           esac
         done
         ;;
-      "Bank Options") python book_keeping.py; read -p "Press any key to continue... "; break ;;
+      "Bank Options") python3 book_keeping.py; read -p "Press any key to continue... "; break ;;
       "Quick Parse") execute_scripts 2; break;;
       "Quit") exit 0 ;;
       *) echo "Invalid option." ;;
